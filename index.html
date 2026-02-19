@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beispielseite — Statisch</title>
+  <meta name="description" content="Eine einfache statische Beispielseite">
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--accent:#0b74de;--muted:#6b7280}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{background:var(--bg);color:#0f172a;display:flex;align-items:center;justify-content:center;padding:2rem}
+    .container{max-width:900px;width:100%;background:var(--card);border-radius:12px;box-shadow:0 6px 24px rgba(12,18,33,0.08);overflow:hidden}
+    header{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid #eef2f7}
+    header h1{font-size:1.125rem;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:1rem;font-size:0.95rem}
+    .hero{padding:2.25rem 1.5rem}
+    .hero h2{margin:0 0 .5rem;font-size:1.6rem}
+    .hero p{margin:0 0 1rem;color:var(--muted)}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:1.5rem;border-top:1px solid #f1f5f9}
+    .card{background:#fbfdff;padding:1rem;border-radius:10px;border:1px solid #f1f5f9}
+    footer{padding:1rem 1.5rem;border-top:1px solid #eef2f7;color:var(--muted);font-size:0.9rem}
+    @media (max-width:520px){.hero h2{font-size:1.25rem}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Beispielseite</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Eine kleine, statische Demo</h2>
+      <p>Dies ist eine minimalistische Indexseite als Startpunkt für statische Projekte.</p>
+      <a class="btn" href="#features">Los geht's</a>
+    </section>
+
+    <section id="features" class="grid">
+      <div class="card">
+        <h3>Leichtgewichtig</h3>
+        <p class="muted">Nur HTML+CSS — ideal als Boilerplate.</p>
+      </div>
+      <div class="card">
+        <h3>Responsiv</h3>
+        <p class="muted">Passt sich an verschiedene Bildschirmgrößen an.</p>
+      </div>
+      <div class="card">
+        <h3>Erweiterbar</h3>
+        <p class="muted">Einfache Struktur zum schnellen Anpassen.</p>
+      </div>
+    </section>
+
+    <footer id="contact">
+      © 2026 — Beispielprojekt • Kontakt: <a href="mailto:info@example.com">info@example.com</a>
+    </footer>
+  </div>
+</body>
+</html>
