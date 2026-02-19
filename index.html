@@ -3,61 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beispielseite — Statisch</title>
-  <meta name="description" content="Eine einfache statische Beispielseite">
+  <title>Schild (Einheit) — Beispiel</title>
+  <meta name="description" content="Schild (S) — eine fiktive Einheit zur Beschreibung der Belastung von IT-Komponenten">
   <style>
-    :root{--bg:#f7f8fb;--card:#fff;--accent:#0b74de;--muted:#6b7280}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    body{background:var(--bg);color:#0f172a;display:flex;align-items:center;justify-content:center;padding:2rem}
-    .container{max-width:900px;width:100%;background:var(--card);border-radius:12px;box-shadow:0 6px 24px rgba(12,18,33,0.08);overflow:hidden}
-    header{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid #eef2f7}
-    header h1{font-size:1.125rem;margin:0}
-    nav a{color:var(--muted);text-decoration:none;margin-left:1rem;font-size:0.95rem}
-    .hero{padding:2.25rem 1.5rem}
-    .hero h2{margin:0 0 .5rem;font-size:1.6rem}
-    .hero p{margin:0 0 1rem;color:var(--muted)}
-    .btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:1.5rem;border-top:1px solid #f1f5f9}
-    .card{background:#fbfdff;padding:1rem;border-radius:10px;border:1px solid #f1f5f9}
-    footer{padding:1rem 1.5rem;border-top:1px solid #eef2f7;color:var(--muted);font-size:0.9rem}
-    @media (max-width:520px){.hero h2{font-size:1.25rem}}
+    body{font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fff;color:#111}
+    .mw-body{max-width:1100px;margin:0 auto;padding:24px}
+    header{border-bottom:1px solid #ddd;padding-bottom:12px;margin-bottom:18px}
+    header h1{font-size:28px;margin:4px 0}
+    .lede{color:#444;margin:8px 0 18px}
+    .toc{float:right;border:1px solid #e5e5e5;padding:10px;border-radius:4px;background:#fafafa;max-width:260px}
+    .content{display:block}
+    h2{border-bottom:1px solid #eee;padding-bottom:6px}
+    .infobox{float:left;margin:0 16px 16px 0;padding:10px;border:1px solid #dfe6ee;background:#f8fbff;border-radius:4px;width:220px}
+    table{border-collapse:collapse}
+    .reference{font-size:90%;color:#555}
+    footer{clear:both;margin-top:32px;padding-top:12px;border-top:1px solid #eee;color:#666}
+    @media (max-width:880px){.toc{float:none;margin-bottom:12px;width:auto}}
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="mw-body">
     <header>
-      <h1>Beispielseite</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
+      <h1>Schild (Einheit)</h1>
+      <div class="lede">Die Schild (Symbol: S) ist hier als fiktive Maßeinheit definiert, welche zur Beschreibung der Belastung und Stress-Reserven von IT-Komponenten verwendet wird.</div>
     </header>
 
-    <section class="hero">
-      <h2>Eine kleine, statische Demo</h2>
-      <p>Dies ist eine minimalistische Indexseite als Startpunkt für statische Projekte.</p>
-      <a class="btn" href="#features">Los geht's</a>
-    </section>
+    <aside class="toc" aria-label="Inhaltsverzeichnis">
+      <strong>Inhaltsverzeichnis</strong>
+      <ol>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#historie">Historie</a></li>
+        <li><a href="#definition-der-einheit">Definition der Einheit</a></li>
+        <li><a href="#anwendungen">Anwendungen</a></li>
+        <li><a href="#beispiele">Beispiele</a></li>
+        <li><a href="#referenzen">Referenzen</a></li>
+      </ol>
+    </aside>
 
-    <section id="features" class="grid">
-      <div class="card">
-        <h3>Leichtgewichtig</h3>
-        <p class="muted">Nur HTML+CSS — ideal als Boilerplate.</p>
+    <main class="content">
+      <div class="infobox">
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Metric_standards_Rijksmuseum.jpg/960px-Metric_standards_Rijksmuseum.jpg" alt="Replicas of historical metric standards" style="max-width:100%;border-radius:6px">
+          <figcaption style="font-size:0.9rem;margin-top:6px">Replicas of historical metric standards — Foto: Yerpo / <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> (Quelle: <a href="https://commons.wikimedia.org/wiki/File:Metric_standards_Rijksmuseum.jpg">Wikimedia Commons</a>)</figcaption>
+        </figure>
+        <hr>
+        <strong>Einheit</strong>
+        <table>
+          <tr><td>Bezeichnung</td><td>Schild</td></tr>
+          <tr><td>Symbol</td><td>S</td></tr>
+          <tr><td>Basiseinheit</td><td>definiert speziell (siehe Text)</td></tr>
+        </table>
       </div>
-      <div class="card">
-        <h3>Responsiv</h3>
-        <p class="muted">Passt sich an verschiedene Bildschirmgrößen an.</p>
-      </div>
-      <div class="card">
-        <h3>Erweiterbar</h3>
-        <p class="muted">Einfache Struktur zum schnellen Anpassen.</p>
-      </div>
-    </section>
 
-    <footer id="contact">
-      © 2026 — Beispielprojekt • Kontakt: <a href="mailto:info@example.com">info@example.com</a>
-    </footer>
+      <section id="definition">
+        <h2>Definition</h2>
+        <p>Die Schild ist eine dimensionslose, normierte Einheit zur Beschreibung der Belastung, die eine IT-Komponente (z. B. CPU, Netzwerkinterface, Storage-Device) während eines definierten Betriebsintervalls erfährt. Ein Schild-Wert kombiniert mehrere Metriken wie CPU-Auslastung, Temperatur-Index, Latenz-Score und I/O-Last in einem vergleichbaren Maßstab.</p>
+      </section>
+
+      <section id="historie">
+        <h2>Historie</h2>
+        <p>Als fiktive Einheit wurde die Schild in dieser Demo entwickelt, um eine einfache und vergleichbare Kennzahl für Belastungstests zu demonstrieren. In realen Umgebungen existieren ähnliche zusammengesetzte Indizes, die aber projekt- oder herstellerabhängig variieren.</p>
+      </section>
+
+      <section id="definition-der-einheit">
+        <h2>Definition der Einheit</h2>
+        <p>Formal lässt sich der Schild als gewichteter Index darstellen:</p>
+        <p class="math">S = w1 * C + w2 * T + w3 * L + w4 * I</p>
+        <p>wobei:</p>
+        <ul>
+          <li><strong>C</strong> = CPU-Auslastungsanteil (0–1)</li>
+          <li><strong>T</strong> = Temperatur-Normalisierter Index (0–1)</li>
+          <li><strong>L</strong> = Latenz-Score (0–1)</li>
+          <li><strong>I</strong> = I/O-Last-Norm (0–1)</li>
+        </ul>
+        <p>Die Gewichtungen w1..w4 werden projektbezogen festgelegt und normieren den Index typischerweise auf einen Maximalwert von 100 S (oder 1.0 in normierter Form). Für diese Beispielseite nehmen wir eine Normierung, bei der 1 Schild = 1 Einheit des kombinierten Index (interpretierbar als 1&nbsp;S = 1·Index-Punkt).</p>
+      </section>
+
+      <section id="anwendungen">
+        <h2>Anwendungen</h2>
+        <p>Die Schild-Einheit kann verwendet werden für:</p>
+        <ul>
+          <li>Lasttests und Benchmarking, um Komponenten unter vergleichbaren Bedingungen zu bewerten.</li>
+          <li>SLAs: Ableiten von Schwellenwerten für Grenzwerte (z. B. <em>kritisch</em> ab 80&nbsp;S).</li>
+          <li>Monitoring-Dashboards: Aggregation heterogener Metriken in einem einzigen, leicht verständlichen Wert.</li>
+        </ul>
+      </section>
+
+      <section id="beispiele">
+        <h2>Beispiele</h2>
+        <p>Beispielrechnung (gewichtete Normierung):</p>
+        <p>Gegeben: C=0.6, T=0.4, L=0.2, I=0.5 mit Gewichten w1=0.4, w2=0.2, w3=0.2, w4=0.2</p>
+        <p>S = 0.4*0.6 + 0.2*0.4 + 0.2*0.2 + 0.2*0.5 = 0.24 + 0.08 + 0.04 + 0.10 = 0.46 → 46&nbsp;S (bei Skalierung auf 0–100)</p>
+      </section>
+
+      <section id="referenzen">
+        <h2>Referenzen</h2>
+        <p class="reference">Diese Seite ist eine original erstellte Demo im Wikipedia-Stil und basiert nicht auf einem existierenden Wikipedia-Artikel für "Schild (Einheit)". Inhalte sind frei verwendbar; bei Übernahme in tatsächliche Dokumente sollten Quellen und Normdefinitionen projektspezifisch dokumentiert werden.</p>
+      </section>
+
+      <footer>
+        <p>Erstellt: 2026 • Beispielprojekt • Für GitHub Pages geeignet (Datei: schild.html)</p>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
