@@ -1,0 +1,12 @@
+Erläuterung: Das Schildometer‑Matrix‑Panel
+Das Schildometer ist ein fiktives Messgerät, das ursprünglich entwickelt wurde, um die Intensität der Schild‑Strahlung präzise zu quantifizieren. Leider besitzt es eine entscheidende Schwäche: Es fällt selbst sofort aus, sobald Schild‑Strahlung detektiert wird.
+Um dennoch statistisch verwertbare Daten zu erzeugen, werden große Mengen dieser Geräte in einer Matrix‑Anordnung betrieben, ähnlich dem Aufbau eines TFT‑Panels. Diese Anordnung ermöglicht es, Muster im Ausfallverhalten zu erkennen – selbst dann, wenn die einzelnen Geräte keinerlei brauchbare Messwerte liefern.
+MAR‑Line und KUS‑Line
+In Anlehnung an die horizontalen und vertikalen Leitbahnen eines Displays werden die Verbindungslinien zwischen den Schildometern als:
+
+MAR‑Line (Messgerät‑Ansteuer‑Reihe)
+KUS‑Line (Kompensations‑Unterbrechungs‑Schiene)
+
+bezeichnet.
+Durch diese Kombination entsteht eine Art "Ausfall‑Raster", dessen Analyse Rückschlüsse auf die räumliche und zeitliche Verteilung der Schild‑Strahlung erlaubt – zumindest theoretisch. In der Praxis führen die gleichzeitigen Ausfälle aller Schildometer meist zu dem einzigen zuverlässig reproduzierbaren Messwert:
+ERR‑SH

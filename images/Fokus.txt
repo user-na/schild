@@ -1,0 +1,5 @@
+Erläuterung: Der Schild‑Fokuseffekt
+Der Schild‑Fokuseffekt beschreibt das typische, humorvoll überzeichnete Verhalten technischer Geräte, wenn sie dem Blick der Schild‑Quelle ausgesetzt werden. In der Darstellung sendet ein Strichmännchen einen intensiven Schild‑Strahl aus den Augen, der direkt auf einen Laptop trifft.
+Die Schild‑Strahlung führt zu einem abrupten Einbruch der Mean Time Between Failure (MTBF) – hier symbolisch um 100×. Dieses Phänomen beruht auf der fiktiven Theorie, dass sich technische Systeme unter Schild‑Einfluss nichtlinear verhalten: Schon ein kurzer, fokussierter Blick kann starke Störungen oder spontane Ausfälle auslösen.
+Der Schild‑Fokuseffekt gilt daher als eine der zentralen Mechanismen zur Erklärung verschiedenster IT‑Anomalien, insbesondere für plötzliche Abstürze, unerklärliche Fehlermeldungen oder das geflügelte IT‑Sprichwort:
+„Er hat nur draufgeschaut – dann war es tot.“
