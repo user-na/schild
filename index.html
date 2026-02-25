@@ -3,107 +3,493 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Schild (Einheit) — Beispiel</title>
-  <meta name="description" content="Schild (S) — eine fiktive Einheit zur Beschreibung der Belastung von IT-Komponenten">
+  <title>Schild (Einheit)</title>
+  <meta name="description" content="Schild (Einheit) – fiktive Maßeinheit für Störintensität technischer Systeme">
   <style>
-    body{font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fff;color:#111}
-    .mw-body{max-width:1100px;margin:0 auto;padding:24px}
-    header{border-bottom:1px solid #ddd;padding-bottom:12px;margin-bottom:18px}
-    header h1{font-size:28px;margin:4px 0}
-    .lede{color:#444;margin:8px 0 18px}
-    .toc{float:right;border:1px solid #e5e5e5;padding:10px;border-radius:4px;background:#fafafa;max-width:260px}
-    .content{display:block}
-    h2{border-bottom:1px solid #eee;padding-bottom:6px}
-    .infobox{float:left;margin:0 16px 16px 0;padding:10px;border:1px solid #dfe6ee;background:#f8fbff;border-radius:4px;width:220px}
-    table{border-collapse:collapse}
-    .reference{font-size:90%;color:#555}
-    footer{clear:both;margin-top:32px;padding-top:12px;border-top:1px solid #eee;color:#666}
-    @media (max-width:880px){.toc{float:none;margin-bottom:12px;width:auto}}
+    :root {
+      --bg: #f8f9fa;
+      --text: #202122;
+      --muted: #54595d;
+      --border: #a2a9b1;
+      --link: #0645ad;
+      --link-visited: #0b0080;
+      --box: #f8f9fa;
+      --box-border: #c8ccd1;
+    }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:visited { color: var(--link-visited); }
+    a:hover { text-decoration: underline; }
+    .mw-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    header {
+      border-bottom: 1px solid #eaecf0;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .brand img {
+      height: 34px;
+      width: auto;
+    }
+    .brand span {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    header h1 {
+      font-size: 28px;
+      margin: 0 0 6px;
+      font-weight: 600;
+    }
+    .hatnotes {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 6px 0 10px;
+    }
+    .hatnotes div { margin: 2px 0; }
+    .lede {
+      font-size: 1rem;
+      color: #333;
+      margin: 8px 0 12px;
+    }
+    .content {
+      display: block;
+    }
+    .infobox {
+      float: right;
+      width: 280px;
+      margin: 0 0 16px 16px;
+      border: 1px solid var(--box-border);
+      background: var(--box);
+      padding: 10px 12px;
+      font-size: 0.92rem;
+    }
+    .infobox h3 {
+      margin: 6px 0 8px;
+      font-size: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #eaecf0;
+      padding-bottom: 4px;
+    }
+    .infobox figure { margin: 0; }
+    .infobox img { width: 100%; height: auto; border: 1px solid #c8ccd1; }
+    .infobox figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
+    .infobox table { width: 100%; border-collapse: collapse; }
+    .infobox th, .infobox td { padding: 4px 6px; vertical-align: top; }
+    .infobox th { text-align: left; width: 40%; color: #3a3a3a; }
+    .infobox td { width: 60%; }
+    .toc {
+      float: left;
+      width: 240px;
+      border: 1px solid var(--box-border);
+      background: #f8f9fa;
+      padding: 10px 12px;
+      margin: 0 16px 16px 0;
+      font-size: 0.92rem;
+    }
+    .toc strong { display: block; margin-bottom: 6px; }
+    .toc ol { margin: 0; padding-left: 18px; }
+    h2 {
+      border-bottom: 1px solid #eaecf0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      font-size: 1.3rem;
+    }
+    h3 { margin-top: 18px; font-size: 1.05rem; }
+    table.wikitable {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0 16px;
+      font-size: 0.95rem;
+    }
+    .wikitable th, .wikitable td {
+      border: 1px solid var(--border);
+      padding: 6px 8px;
+      text-align: left;
+    }
+    blockquote {
+      margin: 10px 0 16px;
+      padding: 8px 12px;
+      border-left: 3px solid #c8ccd1;
+      color: var(--muted);
+      background: #f8f9fa;
+    }
+    figure.content-figure { margin: 12px 0 18px; }
+    figure.content-figure img {
+      max-width: 520px;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #c8ccd1;
+    }
+    figure.content-figure figcaption { font-size: 0.9rem; color: var(--muted); }
+    .references { font-size: 0.92rem; color: #3a3a3a; }
+    .references ol { padding-left: 18px; }
+    .categories {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #eaecf0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .categories span { margin-right: 8px; }
+    .mw-collapsible {
+      margin: 8px 0 16px;
+    }
+    .mw-collapsible > summary {
+      cursor: pointer;
+      color: var(--link);
+      font-size: 0.95rem;
+      margin: 0 0 8px;
+      list-style: none;
+    }
+    .mw-collapsible > summary::before {
+      content: "[einblenden] ";
+    }
+    .mw-collapsible[open] > summary::before {
+      content: "[ausblenden] ";
+    }
+    .mw-collapsible > summary::-webkit-details-marker {
+      display: none;
+    }
+    .theory p {
+      margin: 10px 0;
+      overflow: visible;
+    }
+    .clear { clear: both; }
+    @media (max-width: 900px) {
+      .infobox, .toc {
+        float: none;
+        width: auto;
+        margin: 0 0 16px;
+      }
+    }
   </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        macros: {
+          slashed: ['\\not\\!#1', 1],
+          bra: ['\\langle #1 \\rvert', 1],
+          ket: ['\\lvert #1 \\rangle', 1],
+          braket: ['\\langle #1 \\mid #2 \\rangle', 2],
+          matrixel: ['\\langle #1 \\mid #2 \\mid #3 \\rangle', 3]
+        }
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  
 </head>
 <body>
-  <div class="mw-body">
+  <div class="mw-page">
     <header>
+      <div class="brand">
+        <img src="images/Markuspedia.png" alt="Markuspedia Logo">
+        <span>Markuspedia</span>
+      </div>
       <h1>Schild (Einheit)</h1>
-      <div class="lede">Die Schild (Symbol: S) ist hier als fiktive Maßeinheit definiert, welche zur Beschreibung der Belastung und Stress-Reserven von IT-Komponenten verwendet wird.</div>
+      <div class="hatnotes">
+        <div>Dieser Artikel behandelt die Einheit. Zu weiteren Bedeutungen siehe <a href="#siehe-auch">Schildbürgerstreich (Begriffsklärung)</a>.</div>
+      </div>
+      <p class="lede">
+        Der <strong>Schild</strong> (Einheitenzeichen: <strong>Sh</strong>) ist eine nicht‑SI‑konforme Einheit zur Beschreibung der <em>Störintensität</em> auf elektronische Geräte und IT‑Infrastrukturen, die in Anwesenheit der namensgebenden Quelle beobachtet wird. Charakteristisch sind <strong>nichtlineare Wirkungen</strong>, <strong>fokussierte Einwirkung</strong> auf einzelne Zielgeräte sowie eine dokumentierte Reduktion der <strong>Mean Time Between Failure (MTBF)</strong> um Faktoren &gt; 100 in ungünstigen Konfigurationen.
+      </p>
     </header>
+
+    <aside class="infobox" aria-label="Infobox Schild">
+      <h3>Schild (Einheit)</h3>
+      <figure id="bild-fokus">
+        <img src="images/Fokus.png" alt="Schild‑Fokuseffekt mit gerichteter Einwirkung auf ein Zielgerät">
+        <figcaption>Erläuterung: Der Schild‑Fokuseffekt <sup><a href="#ref-fokus">A</a></sup></figcaption>
+      </figure>
+      <table>
+        <tr><th>Typ</th><td>Einheit</td></tr>
+        <tr><th>Bezeichnung</th><td>Schild</td></tr>
+        <tr><th>Einheitenzeichen</th><td>Sh</td></tr>
+        <tr><th>Benannt nach</th><td>Schild, (Vorname nach Wunsch; z. B. Bruno) – Ingenieur mit starkem Charakter</td></tr>
+        <tr><th>Messgröße</th><td>Störintensität / Defekt‑Neigung technischer Systeme</td></tr>
+        <tr><th>Dimension</th><td>[S] = J³ (nicht SI‑kompatibel)</td></tr>
+        <tr><th>Grundlage</th><td>Nichtlineare Effekte und Fokussierung der Quelle auf das Zielgerät</td></tr>
+        <tr><th>Verwandte Größen</th><td>Ausfallrate λ, MTBF, Störabstand (SIR), Schildzahl (dimensionslos)</td></tr>
+        <tr><th>Vorsätze</th><td>mSh (Milli‑Schild), kSh (Kilo‑Schild), MS (Mega‑Schild)</td></tr>
+        <tr><th>Erstbeschreibung</th><td>Inoffiziell, 1337</td></tr>
+      </table>
+    </aside>
 
     <aside class="toc" aria-label="Inhaltsverzeichnis">
       <strong>Inhaltsverzeichnis</strong>
       <ol>
         <li><a href="#definition">Definition</a></li>
-        <li><a href="#historie">Historie</a></li>
-        <li><a href="#definition-der-einheit">Definition der Einheit</a></li>
-        <li><a href="#anwendungen">Anwendungen</a></li>
-        <li><a href="#beispiele">Beispiele</a></li>
+        <li><a href="#fokuseffekt">Fokuseffekt</a></li>
+        <li><a href="#messverfahren">Messverfahren</a></li>
+        <li><a href="#auswirkungen">Auswirkungen auf IT‑Abteilungen</a></li>
+        <li><a href="#vergleichswerte">Vergleichswerte</a></li>
+        <li><a href="#amateurfunk">Bezug zu Amateurfunk und Luftsport</a></li>
+        <li><a href="#vorsatz">Vorsätze und abgeleitete Größen</a></li>
+        <li><a href="#geschichte">Geschichte</a></li>
+        <li><a href="#theoretische-herleitung">Theoretische Herleitung</a></li>
+        <li><a href="#siehe-auch">Siehe auch</a></li>
         <li><a href="#referenzen">Referenzen</a></li>
       </ol>
     </aside>
 
     <main class="content">
-      <div class="infobox">
-        <figure>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Metric_standards_Rijksmuseum.jpg/960px-Metric_standards_Rijksmuseum.jpg" alt="Replicas of historical metric standards" style="max-width:100%;border-radius:6px">
-          <figcaption style="font-size:0.9rem;margin-top:6px">Replicas of historical metric standards — Foto: Yerpo / <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> (Quelle: <a href="https://commons.wikimedia.org/wiki/File:Metric_standards_Rijksmuseum.jpg">Wikimedia Commons</a>)</figcaption>
-        </figure>
-        <hr>
-        <strong>Einheit</strong>
-        <table>
-          <tr><td>Bezeichnung</td><td>Schild</td></tr>
-          <tr><td>Symbol</td><td>S</td></tr>
-          <tr><td>Basiseinheit</td><td>definiert speziell (siehe Text)</td></tr>
-        </table>
-      </div>
-
       <section id="definition">
         <h2>Definition</h2>
-        <p>Die Schild ist eine dimensionslose, normierte Einheit zur Beschreibung der Belastung, die eine IT-Komponente (z. B. CPU, Netzwerkinterface, Storage-Device) während eines definierten Betriebsintervalls erfährt. Ein Schild-Wert kombiniert mehrere Metriken wie CPU-Auslastung, Temperatur-Index, Latenz-Score und I/O-Last in einem vergleichbaren Maßstab.</p>
+        <p>Der Schild quantifiziert den <strong>Effekt einer spezifischen Quelle</strong> auf technische Systeme. Messreihen gelten als <strong>eingeschränkt belastbar</strong>, da <strong>Messgeräte zur IT‑Überwachung selbst</strong> von der Schild‑Strahlung betroffen sein können (Messgeräte‑Paradoxon). Mathematisch wird häufig eine <strong>superlineare Kopplung</strong> angenommen:</p>
+        <p>
+          <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <msup><mi>λ</mi><mo>′</mo></msup>
+              <mo>(</mo><mi>S</mi><mo>)</mo>
+              <mo>=</mo>
+              <msub><mi>λ</mi><mn>0</mn></msub>
+              <mo>&#x2062;</mo>
+              <mo>(</mo>
+              <mn>1</mn>
+              <mo>+</mo>
+              <mi>k</mi>
+              <mo>&#x2062;</mo>
+              <msup><mi>S</mi><mi>n</mi></msup>
+              <mo>)</mo>
+              <mspace width="0.7em" />
+              <mtext>mit</mtext>
+              <mspace width="0.3em" />
+              <mi>n</mi><mo>&gt;</mo><mn>1</mn>
+              <mo>,</mo>
+            </mrow>
+          </math>
+        </p>
+        <p>
+          wobei
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <msup><mi>λ</mi><mo>′</mo></msup>
+          </math>
+          die beobachtete Ausfallrate,
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <msub><mi>λ</mi><mn>0</mn></msub>
+          </math>
+          die Grundausfallrate ohne Einfluss und
+          <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi></math>
+          die lokale Schild‑Intensität ist. Entsprechend fällt
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>MTBF</mi><mo>′</mo>
+              <mo>=</mo>
+              <mfrac>
+                <mn>1</mn>
+                <msup><mi>λ</mi><mo>′</mo></msup>
+              </mfrac>
+            </mrow>
+          </math>
+          drastisch.
+        </p>
       </section>
 
-      <section id="historie">
-        <h2>Historie</h2>
-        <p>Als fiktive Einheit wurde die Schild in dieser Demo entwickelt, um eine einfache und vergleichbare Kennzahl für Belastungstests zu demonstrieren. In realen Umgebungen existieren ähnliche zusammengesetzte Indizes, die aber projekt- oder herstellerabhängig variieren.</p>
+      <section id="fokuseffekt">
+        <h2>Fokuseffekt</h2>
+        <p>Die Quelle zeigt <strong>gerichtete Aufmerksamkeits‑Kopplung</strong>: Je mehr Fokus auf einem einzelnen Gerät liegt (z. B. Live‑Demo), desto stärker der Effekt („<strong>Schildsches Gesetz</strong>“). Praktisch äußert sich dies als Übergang von sporadischen Hängern zu <strong>reproduzierbaren Defekten</strong> oberhalb einer <strong>Schildtiefe</strong> (effektive Fokuslänge). Der typische Blick‑Effekt ist in der Darstellung des Schild‑Fokuseffekts visualisiert.<sup><a href="#bild-fokus">A</a></sup></p>
+        <p>Entsprechend der Beschreibung sendet die Schild‑Quelle einen intensiven Blick‑Strahl, der direkt auf ein Zielgerät trifft. Die Schild‑Strahlung führt dabei zu einem abrupten Einbruch der MTBF, in der Darstellung symbolisch um den Faktor 100. Schon ein kurzer, fokussierter Blick kann starke Störungen oder spontane Ausfälle auslösen.</p>
+        <blockquote>„Er hat nur draufgeschaut – dann war es tot.“</blockquote>
       </section>
 
-      <section id="definition-der-einheit">
-        <h2>Definition der Einheit</h2>
-        <p>Formal lässt sich der Schild als gewichteter Index darstellen:</p>
-        <p class="math">S = w1 * C + w2 * T + w3 * L + w4 * I</p>
-        <p>wobei:</p>
+      <section id="messverfahren">
+        <h2>Messverfahren</h2>
+        <p>Aufgrund der <strong>Rückwirkung auf Messgeräte</strong> sind direkte Messungen mit <strong>"normalen"</strong> Messgeräten unzuverlässig. Anerkannte Ersatzmetriken:
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mo>Δ</mo><mi>MTBF</mi>
+            </mrow>
+          </math>,
+          Ticket‑Inzidenz, Ersatzteilverbrauch und Kaffeedurchsatz. <strong>Blindmessungen</strong> (Geräte verdeckt vorbereitet) reduzieren den Fokuseffekt, sind jedoch ethisch diskutiert.</p>
+        <p>Das Schildometer ist ein  Messgerät, das selbst ausfällt, sobald Schild‑Strahlung detektiert wird. Um dennoch statistisch verwertbare Daten zu erzeugen, werden große Mengen dieser Geräte in einer Matrix‑Anordnung betrieben, ähnlich dem Aufbau eines TFT‑Panels. Die horizontalen und vertikalen Verbindungslinien werden als <strong>MAR‑Line</strong> (Messgerät‑Ansteuer‑Reihe) und <strong>KUS‑Line</strong> (Kompensations‑Unterbrechungs‑Schiene) bezeichnet. Das Ergebnis ist häufig der einzige zuverlässig reproduzierbare Messwert <strong>"ERR‑SH"</strong> bei Anwesenheit einer Schild-Quelle.</p>
+        <figure id="bild-schildometer" class="content-figure">
+          <img src="images/Schildometer.png" alt="Schildometer‑Matrix‑Panel mit Warnanzeige">
+          <figcaption>Erläuterung: Das Schildometer‑Matrix‑Panel <sup><a href="#ref-schildometer">B</a></sup></figcaption>
+        </figure>
+      </section>
+
+      <section id="auswirkungen">
+        <h2>Auswirkungen auf IT‑Abteilungen</h2>
         <ul>
-          <li><strong>C</strong> = CPU-Auslastungsanteil (0–1)</li>
-          <li><strong>T</strong> = Temperatur-Normalisierter Index (0–1)</li>
-          <li><strong>L</strong> = Latenz-Score (0–1)</li>
-          <li><strong>I</strong> = I/O-Last-Norm (0–1)</li>
+          <li>Beobachtet: <strong>depressiver Ton</strong> in Tickets; <strong>natürliches Ausweichverhalten</strong> gegenüber Quellen der Schild‑Strahlung; Präferenz für <strong>rein mechanische</strong> (strahlungsfeste) Geräte.</li>
+          <li>Beschaffungsleitfaden: Kategorie <strong>„Schild‑Härtung“</strong> (mechanische Tastaturen, Klappmesser‑Netzschalter, luftgekühlte Server mit Handkurbel).</li>
+          <li>Dauerhafte Koffeinierung der Schild-Quelle: Pro Tasse +3 dB Strahlungsschirmung. Entkoffeinierter Kaffee hat gegenteiligen Effekt.</li>
         </ul>
-        <p>Die Gewichtungen w1..w4 werden projektbezogen festgelegt und normieren den Index typischerweise auf einen Maximalwert von 100 S (oder 1.0 in normierter Form). Für diese Beispielseite nehmen wir eine Normierung, bei der 1 Schild = 1 Einheit des kombinierten Index (interpretierbar als 1&nbsp;S = 1·Index-Punkt).</p>
       </section>
 
-      <section id="anwendungen">
-        <h2>Anwendungen</h2>
-        <p>Die Schild-Einheit kann verwendet werden für:</p>
+      <section id="vergleichswerte">
+        <h2>Vergleichswerte</h2>
+        <p><strong>Alltägliche Szenarien (Schätzwerte):</strong></p>
+        <table class="wikitable">
+          <thead>
+            <tr><th>Strahlenquelle</th><th>Intensität</th><th>Effekt</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Betritt Raum</td><td>0,2 Sh</td><td>Jabra Headsets zeigen zufällige Ausfälle</td></tr>
+            <tr><td>Berührung der Tastatur</td><td>0,4 Sh</td><td>PC lässt sich nicht mehr sperren (einzige Erklärung für nicht gesperrte Windows-Rechner)</td></tr>
+            <tr><td>Berührung der Tastatur + Koffeinmangel</td><td>2,5 Sh</td><td>PC friert ein und Neustart dauert sehr lange (PC hat Angst)</td></tr>
+            <tr><td>Strenger Blick auf Gerät + schlechter Schlaf + Koffeinmangel</td><td>1 kSh</td><td>Entweichen von BDQ (beißender dunkler Qualm); Auch Geräte außerhalb der Sichtweite, aber mit elektrischer Verbindung sind beeinflusst.</td></tr>
+          </tbody>
+        </table>
+        <blockquote>Werte dienen der Illustration und sind <strong>nicht kalibriert</strong>.</blockquote>
+      </section>
+
+      <section id="amateurfunk">
+        <h2>Bezug zu Amateurfunk und Luftsport</h2>
         <ul>
-          <li>Lasttests und Benchmarking, um Komponenten unter vergleichbaren Bedingungen zu bewerten.</li>
-          <li>SLAs: Ableiten von Schwellenwerten für Grenzwerte (z. B. <em>kritisch</em> ab 80&nbsp;S).</li>
-          <li>Monitoring-Dashboards: Aggregation heterogener Metriken in einem einzigen, leicht verständlichen Wert.</li>
+          <li><strong>Amateurfunk</strong>: inoffizieller Q‑Code <strong>QRM‑SH</strong> („Störung durch Schild“). Abschirmung mittels <strong>Richtantenne</strong> und <strong>Humor</strong> empfohlen.</li>
+          <li><strong>Ultraleichtflug</strong>: <strong>mechanische</strong> Notinstrumente bleiben funktionsfähig; Schild‑Einfluss primär auf <strong>digitale avionische</strong> Systeme beobachtet.</li>
         </ul>
       </section>
 
-      <section id="beispiele">
-        <h2>Beispiele</h2>
-        <p>Beispielrechnung (gewichtete Normierung):</p>
-        <p>Gegeben: C=0.6, T=0.4, L=0.2, I=0.5 mit Gewichten w1=0.4, w2=0.2, w3=0.2, w4=0.2</p>
-        <p>S = 0.4*0.6 + 0.2*0.4 + 0.2*0.2 + 0.2*0.5 = 0.24 + 0.08 + 0.04 + 0.10 = 0.46 → 46&nbsp;S (bei Skalierung auf 0–100)</p>
+      <section id="vorsatz">
+        <h2>Vorsätze und abgeleitete Größen</h2>
+        <table class="wikitable">
+          <thead>
+            <tr><th>Vorsatz</th><th>Symbol</th><th>Faktor</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Milli</td><td>mSh</td><td>10^-3</td></tr>
+            <tr><td>Kilo</td><td>kSh</td><td>10^3</td></tr>
+            <tr><td>Mega</td><td>MS</td><td>10^6</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Schildzahl</strong>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi>𝒮</mi>
+          </math>
+          : dimensionslos, z. B.
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>𝒮</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>S</mi>
+                  <mo>·</mo>
+                  <mi>F</mi>
+                </mrow>
+                <mi>R</mi>
+              </mfrac>
+            </mrow>
+          </math>
+          , mit Fokusfaktor
+          <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>F</mi></math>
+          und Resilienz
+          <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math>.
+        </p>
       </section>
 
-      <section id="referenzen">
+      <section id="geschichte">
+        <h2>Geschichte</h2>
+        <p>Benannt nach <strong>Schild</strong> (starker Charakter, Ingenieur, Hobbyfunker, Ultraleicht‑Pilot). Frühe Beobachtungen betrafen <strong>plötzlich sinkende MTBF</strong> während konzentrierter Fehlersuche. Die Community etablierte daraufhin <strong>humorvolle Best Practices</strong> (Kaffee, Reservegeräte, mechanische Alternativen).</p>
+      </section>
+
+      <h2 id="theoretische-herleitung">Theoretische Herleitung</h2>
+      <details class="mw-collapsible">
+        <summary>Theoretische Herleitung</summary>
+        <section class="theory" aria-label="Theoretische Herleitung">
+          <p>Kanonisch wird der Schildfaktor aus der Wechselwirkungsdynamik hergeleitet und über Matrixelemente von Spinorzuständen auf die Defektwahrscheinlichkeit abgebildet.</p>
+
+          <p>Wir modellieren Elektronik-Freiheitsgrade durch ein effektives Spinor-Feld $\psi$ und die Störquelle durch ein bosonisches Feld $\Phi$. Der „Schildfaktor“ erscheint dabei als effektive Kopplungsstärke, die in erster Näherung die Übergangsamplitude und damit die beobachtete Ausfallstatistik skaliert.</p>
+
+          <p>$$\mathcal{L}=\bar\psi(i\gamma^\mu\partial_\mu-m)\psi+\tfrac12(\partial_\mu\Phi)(\partial^\mu\Phi)-\tfrac12M^2\Phi^2-g\,\bar\psi\Gamma\psi\,\Phi$$</p>
+
+          <p>Mit dem Wechselwirkungsterm $\mathcal{L}_{\mathrm{int}}=-g\,\bar\psi\Gamma\psi\,\Phi$ folgt für den führenden $2\to2$-Prozess:</p>
+
+          <p>$$\mathcal{M}_{fi}=\bar u(p_3,s_3)\,\Gamma\,u(p_1,s_1)\;\Delta_\Phi(q)\;\bar u(p_4,s_4)\,\Gamma\,u(p_2,s_2)$$</p>
+
+          <p>$$\Delta_\Phi(q)=\frac{i}{q^2-M^2+i\epsilon},\qquad q=p_1-p_3$$</p>
+
+          <p>$$\overline{|\mathcal{M}|^2}=\frac{1}{4}\sum_{s_1,s_2,s_3,s_4}|\mathcal{M}_{fi}|^2$$</p>
+
+          <p>$$\sum_s u(p,s)\bar u(p,s)=\slashed{p}+m,\qquad \sum_s v(p,s)\bar v(p,s)=\slashed{p}-m$$</p>
+
+          <p>$$\overline{|\mathcal{M}|^2}=\frac{g^4}{4\,[(q^2-M^2)^2+\epsilon^2]}\,\mathrm{Tr}\!\left[(\slashed{p}_3+m)\Gamma(\slashed{p}_1+m)\bar\Gamma\right]\,\mathrm{Tr}\!\left[(\slashed{p}_4+m)\Gamma(\slashed{p}_2+m)\bar\Gamma\right]$$</p>
+
+          <p>Dieselbe Übergangsdynamik lässt sich äquivalent in Zustandsnotation schreiben:</p>
+
+          <p>$$\ket{i}=\ket{p_1,s_1; p_2,s_2},\qquad \ket{f}=\ket{p_3,s_3; p_4,s_4}$$</p>
+
+          <p>$$S_{fi}=\matrixel{f}{\hat S}{i}=\delta_{fi}+i(2\pi)^4\delta^{(4)}(P_f-P_i)\,\mathcal{M}_{fi}$$</p>
+
+          <p>$$\mathcal{A}_{fi}=\matrixel{f}{\hat T\exp\!\left[-i\int d^4x\,\hat H_I(x)\right]}{i}$$</p>
+
+          <p>$$\mathcal{P}_{i\to f}=\left|\braket{f}{i}_{\mathrm{out,in}}\right|^2=\left|\matrixel{f}{\hat S}{i}\right|^2$$</p>
+
+          <p>$$P_{\mathrm{def}}(T)=\sum_{f\in\mathcal{D}}\left|\matrixel{f}{\hat S(T,0)}{i}\right|^2$$</p>
+
+          <p>Die Menge $\mathcal{D}$ enthält alle Endzustände, die als Defektzustand des Systems klassifiziert werden (z. B. Bitfehler, instabile Taktung, harter Ausfall). Dadurch ist $P_{\mathrm{def}}(T)$ direkt als beobachtbare Größe interpretierbar.</p>
+
+          <p>Der differentielle Wirkungsquerschnitt lautet:</p>
+
+          <p>$$d\sigma=\frac{1}{4\sqrt{(p_1\cdot p_2)^2-m^4}}\,\overline{|\mathcal{M}|^2}\,(2\pi)^4\delta^{(4)}\!\left(p_1+p_2-\sum_f p_f\right)\,d\Pi_f$$</p>
+
+          <p>Aus dem Wirkungsquerschnitt folgt die effektive Defektrate im Gerät:</p>
+
+          <p>$$\Gamma_{\mathrm{def}}(E)=n_{\mathrm{eff}}\,v_{\mathrm{rel}}\,\sigma_{\mathrm{def}}(E)$$</p>
+
+          <p>Die Defektrate $\Gamma_{\mathrm{def}}$ ist damit die lokale Ereignisrate; die Defektwahrscheinlichkeit ergibt sich als integrierte Prozesswahrscheinlichkeit in einer Beobachtungszeit $T$ (Poisson-Bild):</p>
+
+          <p>$$P_{\mathrm{def}}(T)=1-\exp\!\left(-\int_0^T\Gamma_{\mathrm{def}}(t)\,dt\right)$$</p>
+
+          <p>Mit Fokusfaktor $F$ (z. B. gerichtete Aufmerksamkeit) als feldtheoretische Verstärkung:</p>
+
+          <p>$$g\to g_{\mathrm{eff}}=g\,F,\qquad P_{\mathrm{def}}(T)=1-\exp\!\left(-\int_0^T n_{\mathrm{eff}}v_{\mathrm{rel}}\,\sigma_{\mathrm{def}}(E;gF)\,dt\right)$$</p>
+
+          <p>In dieser Darstellung wirkt der Fokusfaktor $F$ wie eine renormierte Kopplung auf niedrigen Energien: Schon moderate Änderungen von $F$ können über $\overline{|\mathcal{M}|^2}\propto g_{\mathrm{eff}}^4$ zu deutlich erhöhter Defektwahrscheinlichkeit führen.</p>
+
+          <p class="note">Hinweis: Dies ist ein bewusst vereinfachtes, effektives Modell.</p>
+        </section>
+      </details>
+
+      <section id="siehe-auch">
+        <h2>Siehe auch</h2>
+        <p>Schildbürgerstreich · Murphys Gesetz · IT‑Crowd · Nichtlinearität</p>
+      </section>
+
+      <section id="referenzen" class="references">
         <h2>Referenzen</h2>
-        <p class="reference">Diese Seite ist eine original erstellte Demo im Wikipedia-Stil und basiert nicht auf einem existierenden Wikipedia-Artikel für "Schild (Einheit)". Inhalte sind frei verwendbar; bei Übernahme in tatsächliche Dokumente sollten Quellen und Normdefinitionen projektspezifisch dokumentiert werden.</p>
+        <ol>
+          <li>Interne Feldnotiz zur MTBF‑Anomalie (unveröffentlicht).</li>
+          <li>„Kaffee als passiver Störschutz“, Proc. of Office NerdCon.</li>
+          <li>Handbuch für IT‑Härtung, Kap. 7: Mechanik schlägt Elektronik.</li>
+          <li id="ref-fokus">Erläuterung: Der Schild‑Fokuseffekt. Der Schild‑Fokuseffekt beschreibt das Verhalten technischer Geräte unter Schild‑Einfluss, inklusive starker MTBF‑Reduktion und fokussierter Blick‑Wirkung. <a href="#bild-fokus">Zum Bild</a>.</li>
+          <li id="ref-schildometer">Erläuterung: Das Schildometer‑Matrix‑Panel. Messgerät mit Matrix‑Anordnung (MAR‑Line und KUS‑Line) zur statistischen Auswertung von Ausfällen, Ergebnis typischerweise „ERR‑SH“. <a href="#bild-schildometer">Zum Bild</a>.</li>
+        </ol>
       </section>
 
-      <footer>
-        <p>Erstellt: 2026 • Beispielprojekt • Für GitHub Pages geeignet (Datei: schild.html)</p>
-      </footer>
+      <div class="categories">
+        <span>Kategorien:</span>
+        <span>Schildbürger</span>
+        <span>Maßeinheiten</span>
+        <span>Informationstechnologie</span>
+        <span>Amateurfunk</span>
+        <span>Luftsport</span>
+      </div>
+
+      <div class="clear"></div>
     </main>
   </div>
 </body>
