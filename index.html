@@ -45,7 +45,7 @@
       margin-bottom: 6px;
     }
     .brand img {
-      height: 34px;
+      height: 75px;
       width: auto;
     }
     .brand span {
@@ -149,25 +149,6 @@
       font-size: 0.92rem;
     }
     .categories span { margin-right: 8px; }
-    .mw-collapsible {
-      margin: 8px 0 16px;
-    }
-    .mw-collapsible > summary {
-      cursor: pointer;
-      color: var(--link);
-      font-size: 0.95rem;
-      margin: 0 0 8px;
-      list-style: none;
-    }
-    .mw-collapsible > summary::before {
-      content: "[einblenden] ";
-    }
-    .mw-collapsible[open] > summary::before {
-      content: "[ausblenden] ";
-    }
-    .mw-collapsible > summary::-webkit-details-marker {
-      display: none;
-    }
     .theory p {
       margin: 10px 0;
       overflow: visible;
@@ -406,10 +387,8 @@
         <p>Benannt nach <strong>Schild</strong> (starker Charakter, Ingenieur, Hobbyfunker, Ultraleicht‑Pilot). Frühe Beobachtungen betrafen <strong>plötzlich sinkende MTBF</strong> während konzentrierter Fehlersuche. Die Community etablierte daraufhin <strong>humorvolle Best Practices</strong> (Kaffee, Reservegeräte, mechanische Alternativen).</p>
       </section>
 
-      <h2 id="theoretische-herleitung">Theoretische Herleitung</h2>
-      <details class="mw-collapsible">
-        <summary>Theoretische Herleitung</summary>
-        <section class="theory" aria-label="Theoretische Herleitung">
+      <section id="theoretische-herleitung" class="theory" aria-label="Theoretische Herleitung">
+        <h2>Theoretische Herleitung</h2>
           <p>Kanonisch wird der Schildfaktor aus der Wechselwirkungsdynamik hergeleitet und über Matrixelemente von Spinorzuständen auf die Defektwahrscheinlichkeit abgebildet.</p>
 
           <p>Wir modellieren Elektronik-Freiheitsgrade durch ein effektives Spinor-Feld $\psi$ und die Störquelle durch ein bosonisches Feld $\Phi$. Der „Schildfaktor“ erscheint dabei als effektive Kopplungsstärke, die in erster Näherung die Übergangsamplitude und damit die beobachtete Ausfallstatistik skaliert.</p>
@@ -461,8 +440,7 @@
           <p>In dieser Darstellung wirkt der Fokusfaktor $F$ wie eine renormierte Kopplung auf niedrigen Energien: Schon moderate Änderungen von $F$ können über $\overline{|\mathcal{M}|^2}\propto g_{\mathrm{eff}}^4$ zu deutlich erhöhter Defektwahrscheinlichkeit führen.</p>
 
           <p class="note">Hinweis: Dies ist ein bewusst vereinfachtes, effektives Modell.</p>
-        </section>
-      </details>
+      </section>
 
       <section id="siehe-auch">
         <h2>Siehe auch</h2>
